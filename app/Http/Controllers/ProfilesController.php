@@ -9,14 +9,14 @@ class ProfilesController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('profiles.index');
     }
 
     public function show($id)
     {
         $user = User::findOrFail($id);
 
-        return view('home', [
+        return view('profiles.index', [
             'user' => $user,
         ]);
     }

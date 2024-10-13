@@ -16,4 +16,6 @@ Route::get('/profile', [ProfilesController::class, 'index'])->name('profile');
 
 Route::get('/profile/{user}', [ProfilesController::class, 'show'])->name('profile.show');
 
-Route::get('/post', [PostsController::class, 'index'])->name('post');
+Route::get('/post/create', [PostsController::class, 'create']);
+
+Route::post('/post', [PostsController::class, 'store']);
